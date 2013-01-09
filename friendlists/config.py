@@ -1,0 +1,3 @@
+FB_APP_ID = '305146986271993'
+FB_APP_SECRET = '9f8fb324400c38227394de7bcf83b59f'
+SECRET_KEY = 'saehodaeSh4Aeyae4eiQuoh1loh7quai'

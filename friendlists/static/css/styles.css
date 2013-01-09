@@ -1,0 +1,71 @@
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+/*****************************************************************************/
+
+body, select, input {
+    font: 14px/21px 'Open Sans', 'Lucida Grande', Tahoma, sans-serif;
+}
+
+#wrapper {
+    width: 720px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.logout {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#friendlist {
+    font-size: 125%;
+}
+
+h2 {
+    line-height: 35px;
+    margin: 0;
+}
+
+p {
+    margin: 0 0 21px 0;
+}
+
+.lists > .list {
+    width: 300px;
+    float: left;
+}
+
+.list select {
+    width: 100%;
+    height: 600px;
+}
+
+.actions {
+    width: 120px;
+    float: left;
+    padding-top: 35px;
+}
+
+.actions button {
+    display: block;
+    width: 80px;
+    margin: 20px;
+    font-size: 200%;
+}
