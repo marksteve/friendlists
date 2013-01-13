@@ -81,10 +81,6 @@ button a {
     width: 50%;
 }
 
-#friendlist {
-    font-size: 2em;
-}
-
 .lists > .list {
     width: 300px;
     float: left;
