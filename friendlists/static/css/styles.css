@@ -76,24 +76,23 @@ button a {
 
 #wrapper {
     width: 720px;
-    margin: 20px auto;
+    margin: 50px auto;
     position: relative;
     border-radius: 10px 10px 0 0;
-    border: 1px solid #3b5998;
 }
 
 #header {
     background: #3b5998;
     color: white;
     border-radius: 10px 10px 0 0;
-    padding: 10px 10px 5px 10px;
+    padding: 10px 20px 5px 20px;
     box-shadow: inset 0 5px 0 rgba(255, 255, 255, 0.4);
     text-shadow: 0 -2px 0 black;
 }
 
 #header .logout {
     position: absolute;
-    right: 15px;
+    right: 20px;
     top: 10px;
     line-height: 49px;
 }
@@ -106,9 +105,7 @@ button a {
 #friendlist {
     background: #ccc;
     box-shadow: inset 0 5px 0 rgba(255, 255, 255, 0.4);
-    border: #bbb solid;
-    border-width: 1px 0;
-    padding: 10px 5px 5px 5px;
+    padding: 20px 20px 10px 20px;
 }
 
 #lists {
@@ -117,23 +114,24 @@ button a {
 }
 
 #lists > .list {
-    width: 300px;
-    padding: 10px;
+    width: 260px;
+    padding: 10px 20px 20px 20px;
     float: left;
 }
 
 #lists > .list:first-child {
-    margin-right: 39px;
+    margin-right: 59px;
 }
 
 #lists > .list:last-child {
-    margin-left: 39px;
+    margin-left: 59px;
 }
 
 
 #lists .list select {
     outline: 0;
-    border: 0;
+    border: 1px solid #ddd;
+    background: white;
     width: 100%;
     height: 400px;
 }
@@ -142,15 +140,17 @@ button a {
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 78px;
-    left: 320px;
+    width: 118px;
+    left: 300px;
+    border: #ddd solid;
+    border-width: 0 1px;
 }
 
 #lists .actions button {
     display: block;
     position: absolute;
-    left: 0;
-    right: 0;
+    left: 10%;
+    width: 80%;
     font-size: 70px;
     line-height: 42px;
 }
@@ -167,7 +167,7 @@ button a {
 
 #footer {
     background: #3b5998;
-    padding: 15px 10px 10px 10px;
+    padding: 20px 20px 10px 20px;
     box-shadow: inset 0 5px 0 rgba(255, 255, 255, 0.4);
     text-shadow: 0 -2px 0 black;
     color: white;
