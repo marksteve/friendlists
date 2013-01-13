@@ -10,7 +10,12 @@
     </head>
     <body>
     <div id="wrapper">
-        <h1>Friendlists</h1>
+        <div id="header">
+            <h1>Friendlists</h1>
+            {% if session.user and session.access_token %}
+            <a href="/logout" class="logout">Logout</a>
+            {% endif %}
+        </div>
         {% block content %}{% endblock %}
     </div>
     </body>

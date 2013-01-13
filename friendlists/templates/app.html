@@ -4,17 +4,17 @@
 
 <script>
 $(function() {
-    $('#friendlist').on('change', function() {
+    $('#friendlist select').on('change', function() {
         friendlistID = $(this).val();
         if (friendlistID.length) {
             location.href = '/l/' + friendlistID;
         }
     });
-    $('.actions .list').on('click', function(e) {
+    $('#lists .actions .list').on('click', function(e) {
         e.preventDefault();
         $('#unlisted option:selected').remove().appendTo('#listed');
     });
-    $('.actions .unlist').on('click', function(e) {
+    $('#lists .actions .unlist').on('click', function(e) {
         e.preventDefault();
         $('#listed option:selected').remove().appendTo('#unlisted');
     });
@@ -50,53 +50,47 @@ $(function() {
 {% endblock %}
 
 {% block content %}
-
-<a class="logout" href="/logout">Logout</a>
 <form action="" method="post">
-    <div class="cf">
-        <p>
-            <select id="friendlist">
-                <option value="">Select a friendlist</option>
-            {% for friendlist in friendlists %}
-                <option value="{{ friendlist.id }}"
-                    {% if friendlist.id == friendlist_id %}selected="selected"{% endif %}
-                    >{{ friendlist.name }}</option>
-            {% endfor %}
-            </select>
-        </p>
+
+<div id="friendlist" class="cf">
+    <select>
+        <option value="">Select a friendlist</option>
+    {% for friendlist in friendlists %}
+        <option value="{{ friendlist.id }}"
+            {% if friendlist.id == friendlist_id %}selected="selected"{% endif %}
+            >{{ friendlist.name }}</option>
+    {% endfor %}
+    </select>
+</div>
+
+<div id="lists" class="cf">
+    <div class="list">
+        <h2>Unlisted</h2>
+        <select id="unlisted" multiple="multiple">
+        {% for friend in unlisted %}
+            <option value="{{ friend.id }}">{{ friend.name }}</option>
+        {% endfor %}
+        </select>
     </div>
-    <div class="lists cf">
-        <div class="list">
-            <h2>Unlisted</h2>
-            <p>
-                <select id="unlisted" multiple="multiple">
-                {% for friend in unlisted %}
-                    <option value="{{ friend.id }}">{{ friend.name }}</option>
-                {% endfor %}
-                </select>
-            </p>
-        </div>
-        <div class="actions">
-            <button class="list">&rsaquo;</button>
-            <button class="unlist">&lsaquo;</button>
-        </div>
-        <div class="list">
-            <h2>Listed</h2>
-            <p>
-                <select name="listed" id="listed" multiple="multiple">
-                {% for friend in listed %}
-                    <option value="{{ friend.id }}">{{ friend.name }}</option>
-                {% endfor %}
-                </select>
-            </p>
-        </div>
+    <div class="actions">
+        <button class="list">&rsaquo;</button>
+        <button class="unlist">&lsaquo;</button>
     </div>
-    <div class="cf">
-        <p>
-            <input type="submit" value="Save changes" id="submit">
-            <a href="">Discard changes</a>
-        </p>
+    <div class="list">
+        <h2>Listed</h2>
+        <select name="listed" id="listed" multiple="multiple">
+        {% for friend in listed %}
+            <option value="{{ friend.id }}">{{ friend.name }}</option>
+        {% endfor %}
+        </select>
     </div>
+</div>
+
+<div id="footer" class="cf">
+    <input type="submit" value="Save changes" id="submit">
+    <a href="" class="discard">Discard changes</a>
+</div>
+
 </form>
 
 {% endblock %}

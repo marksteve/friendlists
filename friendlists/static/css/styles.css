@@ -16,30 +16,39 @@
     *zoom: 1;
 }
 
-/*****************************************************************************/
-
 body {
-    background: #879DCC url(../images/square_bg.png);
+    background: #f1e197;
 }
 
 body, select, input, button {
     font: 14px/21px 'Open Sans', 'Lucida Grande', Tahoma, sans-serif;
-    color: #132D63;
+    color: #333;
 }
 
 a {
     color: inherit;
+    text-decoration: none;
 }
 
 input[type=submit], input[type=button], button {
-    border: 0;
-    background-color: #E4C848;
-    color: #944F18;
+    background: #ccc;
+    border: 1px #bbb solid;
+    border-radius: 5px;
+    color: #555;
+    box-shadow: inset 0 5px 0 rgba(255, 255, 255, 0.4);
+    padding-top: 5px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    line-height: 35px;
     font-weight: bold;
 }
 
+input[type=submit]:hover, input[type=button]:hover, button:hover {
+    color: #3b5998;
+}
+
 input[type=submit]:disabled, input[type=button]:disabled, button:disabled {
-    color: #AB9B53;
+    color: #aaa;
 }
 
 h1 {
@@ -56,51 +65,114 @@ p {
     margin: 0 0 21px 0;
 }
 
+p:last-child {
+    margin: 0;
+}
+
 button a {
     text-decoration: none;
     color: inherit;
 }
 
 #wrapper {
-    padding: 20px;
-    border: 5px solid #132D63;
-    background-color: white;
     width: 720px;
     margin: 20px auto;
     position: relative;
+    border-radius: 10px 10px 0 0;
+    border: 1px solid #3b5998;
 }
 
-.logout {
+#header {
+    background: #3b5998;
+    color: white;
+    border-radius: 10px 10px 0 0;
+    padding: 10px 10px 5px 10px;
+    box-shadow: inset 0 5px 0 rgba(255, 255, 255, 0.4);
+    text-shadow: 0 -2px 0 black;
+}
+
+#header .logout {
     position: absolute;
-    right: 20px;
-    top: 20px;
+    right: 15px;
+    top: 10px;
     line-height: 49px;
 }
 
 #about {
-    width: 50%;
+    background: white;
+    padding: 20px 25% 20px 20px;
 }
 
-.lists > .list {
+#friendlist {
+    background: #ccc;
+    box-shadow: inset 0 5px 0 rgba(255, 255, 255, 0.4);
+    border: #bbb solid;
+    border-width: 1px 0;
+    padding: 10px 5px 5px 5px;
+}
+
+#lists {
+    background: white;
+    position: relative;
+}
+
+#lists > .list {
     width: 300px;
+    padding: 10px;
     float: left;
 }
 
-.list select {
+#lists > .list:first-child {
+    margin-right: 39px;
+}
+
+#lists > .list:last-child {
+    margin-left: 39px;
+}
+
+
+#lists .list select {
+    outline: 0;
+    border: 0;
     width: 100%;
-    height: 600px;
+    height: 400px;
 }
 
-.actions {
-    width: 120px;
-    float: left;
-    padding-top: 42px;
+#lists .actions {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 78px;
+    left: 320px;
 }
 
-.actions button {
+#lists .actions button {
     display: block;
-    width: 80px;
-    margin: 20px;
-    font-size: 28px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    font-size: 70px;
     line-height: 42px;
+}
+
+#lists .actions .unlist {
+    top: 2%;
+    bottom: 51%;
+}
+
+#lists .actions .list {
+    top: 51%;
+    bottom: 2%;
+}
+
+#footer {
+    background: #3b5998;
+    padding: 15px 10px 10px 10px;
+    box-shadow: inset 0 5px 0 rgba(255, 255, 255, 0.4);
+    text-shadow: 0 -2px 0 black;
+    color: white;
+}
+
+#footer .discard {
+    margin-left: 10px;
 }
