@@ -18,33 +18,71 @@
 
 /*****************************************************************************/
 
-body, select, input {
+body {
+    background: #879DCC url(../images/square_bg.png);
+}
+
+body, select, input, button {
     font: 14px/21px 'Open Sans', 'Lucida Grande', Tahoma, sans-serif;
+    color: #132D63;
 }
 
-#wrapper {
-    width: 720px;
-    margin: 0 auto;
-    position: relative;
+a {
+    color: inherit;
 }
 
-.logout {
-    position: absolute;
-    right: 0;
-    top: 0;
+input[type=submit], input[type=button], button {
+    border: 0;
+    background-color: #E4C848;
+    color: #944F18;
+    font-weight: bold;
 }
 
-#friendlist {
-    font-size: 125%;
+input[type=submit]:disabled, input[type=button]:disabled, button:disabled {
+    color: #AB9B53;
+}
+
+h1 {
+    line-height: 49px;
+    margin: 0;
 }
 
 h2 {
-    line-height: 35px;
+    line-height: 42px;
     margin: 0;
 }
 
 p {
     margin: 0 0 21px 0;
+}
+
+button a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#wrapper {
+    padding: 20px;
+    border: 5px solid #132D63;
+    background-color: white;
+    width: 720px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.logout {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    line-height: 49px;
+}
+
+#about {
+    width: 50%;
+}
+
+#friendlist {
+    font-size: 2em;
 }
 
 .lists > .list {
@@ -60,12 +98,13 @@ p {
 .actions {
     width: 120px;
     float: left;
-    padding-top: 35px;
+    padding-top: 42px;
 }
 
 .actions button {
     display: block;
     width: 80px;
     margin: 20px;
-    font-size: 200%;
+    font-size: 28px;
+    line-height: 42px;
 }

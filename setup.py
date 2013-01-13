@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='friendlists',
-    version='0.0.0',
+    version='0.1.0',
     url='https://github.com/marksteve/friendlists',
     license='MIT',
     author='Mark Steve Samson',
@@ -12,6 +12,7 @@ setup(
     long_description=__doc__,
     packages=['friendlists'],
     zip_safe=False,
+    include_package_data=True,
     platforms='any',
     install_requires=[
         'Flask==0.9',

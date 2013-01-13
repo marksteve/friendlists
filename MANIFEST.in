@@ -1,0 +1,2 @@
+recursive-include friendlists/static *
+recursive-include friendlists/templates *
