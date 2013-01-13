@@ -1,10 +1,10 @@
 from fboauth2 import FBClient
-from flask import (Flask, redirect, url_for, request, session, render_template,
-                   abort)
+from flask import Flask, redirect, url_for, request, session, render_template
 
 
-app = Flask(__name__)
+app = Flask(__name__, instance_relative_config=True)
 app.config.from_object('friendlists.config')
+app.config.from_pyfile('application.cfg', silent=True)
 
 
 def get_fb_client(**kwargs):
