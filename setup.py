@@ -15,7 +15,7 @@ setup(
     include_package_data=True,
     platforms='any',
     install_requires=[
-        'Flask==0.9',
+        'Flask==1.0',
         'requests<1.0',
         'fboauth2',
     ],
